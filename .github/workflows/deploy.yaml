@@ -27,7 +27,7 @@ jobs:
         REGION: us-central1
         REPO_NAME: iris-repo
       run: |
-        echo "${{ secrets.GCP_SA_KEY }}" > gcloud.json
+        echo "${{ secrets.GCP_SA_KEY }}" | base64 -d > gcloud.json
         gcloud auth activate-service-account --key-file=gcloud.json
         gcloud config set project $GCP_PROJECT_ID
         gcloud auth configure-docker us-central1-docker.pkg.dev
