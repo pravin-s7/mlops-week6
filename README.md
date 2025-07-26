@@ -89,6 +89,8 @@ kubectl apply -f k8s/deployment.yaml
 kubectl apply -f k8s/service.yaml
 ```
 
+or Create a workload deployment manually in GCP
+
 ---
 
 ### 6️⃣ Add GitHub Secrets
@@ -136,7 +138,7 @@ curl -X POST http://<EXTERNAL-IP>/predict/ \
 
 ## 📌 Notes
 
-* Ensure your `Dockerfile` uses port `8200`
+* Ensure your `Dockerfile` uses port `8000`
 * Kubernetes manifests should request limited resources for Autopilot compatibility
 * The Docker image is stored in GCP Artifact Registry
 * CML + GitHub Actions automatically handles image build and redeployment
