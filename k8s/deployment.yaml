@@ -18,7 +18,7 @@ spec:
       - name: iris-api
         image: us-central1-docker.pkg.dev/rare-keep-460211-q6/iris-repo/iris-api:latest
         ports:
-        - containerPort: 8200
+        - containerPort: 8000
         resources:
           requests:
             cpu: "250m"
